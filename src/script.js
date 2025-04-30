@@ -47,12 +47,23 @@ document.getElementById('closeCart').addEventListener('click', () => {
 });
 
 document.getElementById('checkout').addEventListener('click', () => {
-  if (cart.length === 0) {
-    alert('Seu carrinho está vazio!');
-    return;
-  }
-  alert('Pedido finalizado! Obrigado por comprar na Ichiban!');
-  cart.length = 0;
-  updateCartCount();
-  document.getElementById('cart-modal').classList.add('hidden');
-});
+    if (cart.length === 0) {
+      alert('Seu carrinho está vazio!');
+      return;
+    }
+  
+    // Finaliza o pedido
+    cart.length = 0;
+    updateCartCount();
+    document.getElementById('cart-modal').classList.add('hidden');
+  
+    // Mostra o toast
+    const toast = document.getElementById('toast');
+    toast.classList.remove('hidden');
+    toast.classList.add('visible');
+  
+    setTimeout(() => {
+      toast.classList.remove('visible');
+      toast.classList.add('hidden');
+    }, 3000);
+  });
