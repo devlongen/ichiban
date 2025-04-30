@@ -55,70 +55,74 @@
   }
   
   /* Grid de Produtos */
-  main.menu {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 1rem;
-    padding: 1rem;
-    max-width: 1200px;
-    margin: auto;
-  }
-  
-  .card-item {
-    background-color: #1e1e1e;
-    border-radius: 10px;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    transition: transform 0.2s ease;
-  }
-  
-  .card-item:hover {
-    transform: scale(1.02);
-  }
-  
-  .card-item img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-  }
-  
-  .card-item h3 {
-    font-size: 1.1rem;
-    margin: 1rem;
-  }
-  
-  .card-item p {
-    font-size: 0.9rem;
-    margin: 0 1rem 1rem;
-    color: #ccc;
-  }
-  
-  .card-footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0 1rem 1rem;
-    flex-wrap: wrap;
-  }
-  
-  .price {
-    font-weight: bold;
-    font-size: 1rem;
-  }
-  
-  .add-to-cart {
-    background-color: #fff;
-    color: #1f1f1f;
-    border: none;
-    padding: 0.5rem 0.8rem;
-    border-radius: 5px;
-    font-weight: bold;
-    cursor: pointer;
-    font-size: 0.9rem;
-    margin-top: 0.5rem;
-  }
-  
+  /* Grid de Produtos */
+main.menu {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem; /* Aumentando o espaçamento entre as colunas e linhas */
+  padding: 2rem; /* Garantindo espaçamento nas bordas da seção */
+  max-width: 1200px;
+  margin: auto;
+}
+
+.card-item {
+  background-color: #1e1e1e;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease;
+  padding: 1rem; /* Garantindo espaçamento interno no card */
+  margin-bottom: 1.5rem; /* Adicionando espaçamento entre os cards */
+}
+
+.card-item:hover {
+  transform: scale(1.02);
+}
+
+.card-item img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  margin-bottom: 1rem; /* Espaçamento abaixo da imagem */
+}
+
+.card-item h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem; /* Espaçamento abaixo do título */
+}
+
+.card-item p {
+  font-size: 0.9rem;
+  margin-bottom: 1rem; /* Mais espaço abaixo da descrição */
+  color: #ccc;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem; /* Espaço acima do rodapé */
+  flex-wrap: wrap;
+}
+
+.price {
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.add-to-cart {
+  background-color: #fff;
+  color: #1f1f1f;
+  border: none;
+  padding: 0.5rem 0.8rem;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+
   /* Modal Carrinho */
   .modal {
     position: fixed;
