@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ichiban - Culinária Japonesa</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <header>
+        <div class="header-container">
+          <img src="img/Logo.png" alt="Ichiban Logo" />
+          <h1>Ichiban</h1>
+        </div>
+        <div class="cart-button" id="openCart">🛒 <span id="cart-count">0</span></div>
+        <p>O melhor da culinária japonesa na sua mesa</p>
+      </header>
+
+  <main class="menu">
+    <div class="card-item">
+      <img src="img/SalmaoJPG.jpg" alt="Salmão Nigiri">
+      <h3>Salmão Nigiri</h3>
+      <p>Fatias frescas de salmão sobre arroz temperado</p>
+      <div class="card-footer">
+        <span class="price">R$ 12,00</span>
+        <button class="add-to-cart" data-name="Salmão Nigiri" data-price="12">Adicionar</button>
+      </div>
+    </div>
+    <div class="card-item">
+      <img src="img/AtumJPG.jpg" alt="Atum Nigiri">
+      <h3>Atum Nigiri</h3>
+      <p>Delicioso atum fresco sobre arroz levemente avinagrado</p>
+      <div class="card-footer">
+        <span class="price">R$ 13,00</span>
+        <button class="add-to-cart" data-name="Atum Nigiri" data-price="13">Adicionar</button>
+      </div>
+    </div>
+    <div class="card-item">
+      <img src="https://via.placeholder.com/300x200?text=Hot+Roll" alt="Hot Roll">
+      <h3>Hot Roll</h3>
+      <p>Rolinhos fritos recheados com salmão e cream cheese</p>
+      <div class="card-footer">
+        <span class="price">R$ 15,00</span>
+        <button class="add-to-cart" data-name="Hot Roll" data-price="15">Adicionar</button>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Ichiban - Todos os direitos reservados.</p>
+  </footer>
+
+  <!-- Modal Carrinho -->
+  <div id="cart-modal" class="modal hidden">
+    <div class="modal-content">
+      <h2>🛒 Seu Pedido</h2>
+      <ul id="cart-items"></ul>
+      <p class="total">Total: R$ <span id="cart-total">0.00</span></p>
+      <div class="modal-buttons">
+        <button id="checkout">Finalizar Pedido</button>
+        <button id="closeCart">Fechar</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
